@@ -2,382 +2,290 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <meta
-    name="description"
-    content="Fateh Saeidi is a historian of Islam and Sufism whose research examines religion, politics, coloniality, and culture in the Middle East."
-  >
-
-  <title>
-    Fateh Saeidi | Historian of Islam and Sufism
-  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fateh Saeidi is a Kurdish scholar and historian of religion whose research examines religion, sovereignty, and political modernity in the Middle East.">
+  <title>Fateh Saeidi | Historian of Religion, Sovereignty, and the Middle East</title>
   <style>
-  :root {
-    --primary: #243b53;
-    --secondary: #486581;
-    --accent: #9b6a3f;
-    --background: #f7f7f4;
-    --surface: #ffffff;
-    --text: #24313d;
-    --muted: #5f6c78;
-    --border: #d9dee3;
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    margin: 0;
-    background: var(--background);
-    color: var(--text);
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 18px;
-    line-height: 1.75;
-  }
-
-  header {
-    background: var(--primary);
-    color: white;
-    padding: 70px 24px 60px;
-    text-align: center;
-  }
-
-  header h1 {
-    margin: 0 0 14px;
-    font-size: clamp(2.5rem, 7vw, 4.5rem);
-    font-weight: normal;
-    letter-spacing: 0.02em;
-  }
-
-  header p {
-    max-width: 900px;
-    margin: 0 auto;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: clamp(1rem, 2.5vw, 1.3rem);
-    line-height: 1.6;
-    opacity: 0.92;
-  }
-
-  main {
-    width: min(100% - 40px, 980px);
-    margin: 50px auto;
-  }
-
-  section {
-    margin-bottom: 70px;
-  }
-
-  section > h2 {
-    margin-bottom: 28px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid var(--accent);
-    color: var(--primary);
-    font-size: 2rem;
-    font-weight: normal;
-  }
-
-  article {
-    margin: 30px 0;
-    padding: 30px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    box-shadow: 0 5px 18px rgba(36, 59, 83, 0.06);
-  }
-
-  article h3,
-  section h3 {
-    margin-top: 0;
-    color: var(--secondary);
-    font-size: 1.4rem;
-    line-height: 1.4;
-  }
-
-  p {
-    margin: 0 0 1.2em;
-  }
-
-  a {
-    color: var(--accent);
-    text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-
-  footer {
-    background: var(--primary);
-    color: white;
-    padding: 24px;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.9rem;
-  }
-
-  footer p {
-    margin: 0;
-  }
-
-  @media (max-width: 650px) {
+    :root {
+      --background: #f7f6f2;
+      --text: #252525;
+      --muted: #66645f;
+      --accent: #7a4e2d;
+      --border: #ddd8cf;
+      --max-width: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
-      font-size: 16px;
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18px;
+      line-height: 1.75;
     }
-
-    header {
-      padding: 50px 20px 42px;
+    a { color: inherit; text-decoration: none; }
+    a:hover, a:focus { color: var(--accent); }
+    .container {
+      width: min(calc(100% - 40px), var(--max-width));
+      margin: 0 auto;
     }
-
-    main {
-      width: min(100% - 28px, 980px);
-      margin-top: 35px;
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      background: rgba(247, 246, 242, 0.97);
     }
-
-    article {
-      padding: 22px 18px;
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
     }
-
-    section {
-      margin-bottom: 50px;
+    .site-name {
+      font-size: 1.28rem;
+      letter-spacing: 0.02em;
     }
-  }
-</style>
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.9rem;
+    }
+    .hero {
+      padding: 78px 0 72px;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+      gap: 72px;
+      align-items: center;
+    }
+    .eyebrow {
+      margin: 0 0 14px;
+      color: var(--accent);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0 0 18px;
+      font-size: clamp(3rem, 7vw, 5.8rem);
+      font-weight: normal;
+      line-height: 1.02;
+      letter-spacing: -0.035em;
+    }
+    .tagline {
+      max-width: 760px;
+      margin: 0 0 24px;
+      font-size: clamp(1.35rem, 2.7vw, 2rem);
+      line-height: 1.35;
+    }
+    .position {
+      margin: 0 0 28px;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+    .hero-intro {
+      max-width: 720px;
+      margin: 0 0 30px;
+      color: #41413e;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.92rem;
+    }
+    .links a {
+      padding-bottom: 2px;
+      border-bottom: 1px solid var(--accent);
+    }
+    .portrait { margin: 0; }
+    .portrait img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center 24%;
+      border: 1px solid var(--border);
+      background: #e7e2da;
+    }
+    main { padding: 78px 0 90px; }
+    .section-grid {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 70px;
+      align-items: start;
+    }
+    h2 {
+      position: sticky;
+      top: 30px;
+      margin: 0;
+      color: var(--accent);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.95rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+    .about-copy { max-width: 760px; }
+    .about-copy p { margin: 0 0 1.35em; }
+    .about-copy p:first-child {
+      font-size: 1.28rem;
+      line-height: 1.65;
+    }
+    .service { color: var(--muted); }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 0 34px;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.86rem;
+    }
+    @media (max-width: 820px) {
+      .nav {
+        padding: 18px 0;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .nav-links { gap: 12px 18px; }
+      .hero { padding: 52px 0 58px; }
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 42px;
+      }
+      .portrait { max-width: 440px; }
+      .section-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      h2 { position: static; }
+    }
+    @media (max-width: 520px) {
+      body { font-size: 16px; }
+      .container {
+        width: min(calc(100% - 28px), var(--max-width));
+      }
+      .nav-links { font-size: 0.82rem; }
+      h1 { font-size: 3rem; }
+      .tagline { font-size: 1.3rem; }
+      main { padding-top: 56px; }
+    }
+  </style>
 </head>
-
 <body>
-
-  <!-- Header and academic identity -->
-  <header>
-    <h1>Fateh Saeidi</h1>
-
-    <p>
-      Historian of Islam and Sufism |
-      Religion, Politics, and Coloniality in the Middle East
-    </p>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="site-name" href="#top">Fateh Saeidi</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Current Projects</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
+  <section class="hero" id="top">
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow">Kurdish Scholar and Historian of Religion</p>
+        <h1>Fateh Saeidi</h1>
+        <p class="tagline">Historian of Religion, Sovereignty, and the Middle East</p>
+        <p class="position">
+          Research Fellow<br>
+          Southwest Asia and North Africa Program<br>
+          Cornell University
+        </p>
+        <p class="hero-intro">
+          My research examines how religious traditions shape and are reshaped
+          by sovereignty, political authority, and social transformation in
+          the Middle East.
+        </p>
+        <div class="links">
+          <a href="mailto:fateh.saeidi@gmail.com">Email</a>
+          <a href="https://scholar.google.com/citations?user=iJ_XCdAAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+          <a href="https://orcid.org/0000-0001-7109-5973" target="_blank" rel="noopener">ORCID</a>
+          <a href="https://www.researchgate.net/profile/Fateh-Saeidi?ev=hdr_xprf" target="_blank" rel="noopener">ResearchGate</a>
+          <a href="https://utexas.academia.edu/FatehSaeidi" target="_blank" rel="noopener">Academia</a>
+          <a href="https://www.linkedin.com/in/fateh-saeidi-999939292/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+
+      <figure class="portrait">
+        <img src="profile.jpg" alt="Portrait of Fateh Saeidi in a library">
+      </figure>
+    </div>
+  </section>
 
   <main>
-
-    <!-- About -->
-    <section id="about">
+    <section class="container section-grid" id="about">
       <h2>About</h2>
+      <div class="about-copy">
+        <p>
+          I am a Kurdish scholar and historian of religion whose research
+          examines the relationship between religious traditions, sovereignty,
+          political authority, and social transformation in the Middle East.
+          My work brings together the history of religion, Islamic intellectual
+          history, political sociology, and critical approaches to coloniality.
+        </p>
 
-      <p>
-        I am a historian of Islam and Sufism whose research lies at the
-        intersection of religious studies, history, and politics. My work
-        examines how religious ideas and traditions become historical,
-        social, and political forces.
-      </p>
+        <p>
+          My historical research focuses particularly on the development of
+          asceticism and Sufism in medieval Iran, with attention to regional
+          traditions, religious networks, intellectual exchange, and the social
+          settings in which mystical ideas and practices emerged. Alongside this
+          work, I study Yarsan religious history and the broader place of
+          minoritized religious traditions in the history of Iran and Kurdistan.
+        </p>
 
-      <p>
-        My research focuses on the development of asceticism, Sufism, and
-        Islamic intellectual traditions in medieval Iran, as well as the
-        relationships among religion, political authority, coloniality,
-        nationalism, and cultural production in the modern Middle East.
-      </p>
+        <p>
+          My research on the modern Middle East examines the relationship
+          between religion and political power. It addresses political Islam,
+          sovereignty, nationalism, state formation, capitalism, coloniality,
+          and the political and cultural conditions of Kurdish life. Across
+          these areas, I am interested in how religious and political categories
+          are produced, institutionalized, and used to define authority,
+          belonging, and exclusion.
+        </p>
 
-      <p>
-        My geographical areas of specialization include Iran, Kurdistan,
-        Anatolia, and the broader Persianate and Middle Eastern worlds.
-      </p>
+        <p>
+          I received my PhD in Iranian Studies from the University of Göttingen,
+          where I specialized in the history of religion. From 2016 to 2024, I
+          taught in the Department of Sociology at Soran University. From 2024
+          to 2026, I was a Postdoctoral Fellow in the Department of Religious
+          Studies at The University of Texas at Austin. I am currently a
+          Research Fellow in the Southwest Asia and North Africa Program at
+          Cornell University.
+        </p>
+
+        <p class="service">
+          I also serve on the Editorial Board of <em>TISHK Magazine</em> and on
+          the Academic Advisory Board of TISHK, Center for Kurdistan Studies.
+        </p>
+      </div>
     </section>
 
-
-    <!-- Research -->
-    <section id="research">
-      <h2>Research</h2>
-
-      <p>
-        My research is organized around four interconnected areas that
-        examine the historical relationships among religion, culture,
-        political power, and social transformation.
-      </p>
-
-
-      <!-- Research Area 1 -->
-      <article>
-        <h3>1. Sufism and Islamic Intellectual History</h3>
-
-        <p>
-          This area examines the historical development of asceticism,
-          classical Sufism, and Islamic intellectual traditions in medieval
-          Iran and the broader Persianate world. My research explores the
-          formation of early Sufi communities, mystical literature,
-          devotional practices, and the relationships among Sufism,
-          theology, philosophy, and social life.
-        </p>
-
-        <p>
-          My current book project investigates the development of
-          renunciation and classical Sufism in the Jibāl region, with
-          particular attention to cities such as Iṣfahān, Hamadān, Rayy,
-          and other important intellectual and religious centers of western
-          Iran.
-        </p>
-      </article>
-
-
-      <!-- Research Area 2 -->
-      <article>
-        <h3>2. Religion and Politics in the Modern Middle East</h3>
-
-        <p>
-          My work in this area investigates the relationship between
-          religion, political authority, nationalism, violence, and state
-          formation in the modern Middle East. I am particularly interested
-          in the political uses of Islamic discourse, the production of
-          religious legitimacy, sectarian politics, and competing visions
-          of Islamic government and political community.
-        </p>
-
-        <p>
-          This research also examines how religious concepts are
-          reinterpreted in response to revolution, war, political
-          mobilization, and struggles over sovereignty and belonging.
-        </p>
-      </article>
-
-
-      <!-- Research Area 3 -->
-      <article>
-        <h3>3. Coloniality, Culture, and Kurdish Studies</h3>
-
-        <p>
-          This research examines coloniality, cultural domination,
-          nationalism, and knowledge production in Kurdistan. Drawing on
-          anti-colonial theory, historical sociology, and cultural studies,
-          I explore the relationships among Kurdish identity, religion,
-          state power, language, and the politics of cultural
-          representation.
-        </p>
-
-        <p>
-          I am especially interested in the ways colonial and national
-          institutions represent, folklorize, assimilate, or exclude Kurdish
-          communities, as well as the intellectual and cultural practices
-          through which Kurdish actors resist these processes and produce
-          alternative forms of knowledge.
-        </p>
-      </article>
-
-
-      <!-- Research Area 4 -->
-      <article>
-        <h3>4. Islam, Capitalism, and Political Modernity</h3>
-
-        <p>
-          This emerging long-term research project investigates the
-          historical formation of modern political Islam in the Middle
-          East. It asks how the aspiration to revive Islamic civilization
-          contributed to the development of modern Islamist movements and
-          how religious revival became connected to political organization,
-          nationalism, economic transformation, and modern state power.
-        </p>
-
-        <p>
-          Bringing Weberian historical sociology into dialogue with Marxist
-          social theory, the project examines how selected traditions of
-          asceticism, ethical discipline, and Sufism were transformed and
-          incorporated into different forms of political Islam. It explores
-          how religious discipline, activism, education, entrepreneurship,
-          and communal organization interacted with the development of
-          capitalist social relations.
-        </p>
-
-        <p>
-          The project also considers how Islamist movements combined
-          religious universalism with different forms of nationalism. Its
-          comparative cases include Salafism in Saudi Arabia, the Muslim
-          Brotherhood and its networks in the Arab world, including Qatar,
-          Gülenism in Turkey, and modern Shiʿi political Islam and
-          Khomeinism in Iran.
-        </p>
-
-        <p>
-          Rather than treating political Islam as external to modernity,
-          this project approaches it as one of the forces through which
-          political, cultural, and capitalist modernity has been produced
-          and transformed in the Middle East.
-        </p>
-      </article>
-
-    </section>
-
-
-    <!-- Teaching -->
-    <section id="teaching">
-      <h2>Teaching</h2>
-
-      <p>
-        My teaching interests include Islam and politics, the history of
-        Sufism, Islamic intellectual history, religion and politics in the
-        Middle East, sociology of religion, Kurdish cultural studies,
-        colonial and anti-colonial theory, nationalism, and historical
-        sociology.
-      </p>
-    </section>
-
-
-    <!-- Current Projects -->
-    <section id="projects">
-      <h2>Current Projects</h2>
-
-      <h3>
-        The Development of Renunciation and Classical Sufism in the
-        Jibāl Region
-      </h3>
-
-      <p>
-        This book project reconstructs the historical development of
-        asceticism and classical Sufism in western and central Iran. It
-        examines regional Sufi communities, intellectual networks,
-        institutions, texts, practices, and relationships between local
-        traditions and the broader history of Islamic mysticism.
-      </p>
-
-      <h3>Islam, Capitalism, and Political Modernity</h3>
-
-      <p>
-        This multi-year comparative project examines the historical rise
-        and transformation of political Islam through the relationships
-        among religious revival, ethical discipline, nationalism,
-        capitalist development, and political power.
-      </p>
-    </section>
-
-
-    <!-- Contact -->
-    <section id="contact">
-      <h2>Contact</h2>
-
-      <p>
-        Email:
-        <a href="mailto:fateh.saeidi@gmail.com">
-          fateh.saeidi@gmail.com
-        </a>
-      </p>
-    </section>
-
+    <section id="research" aria-hidden="true"></section>
+    <section id="publications" aria-hidden="true"></section>
+    <section id="projects" aria-hidden="true"></section>
+    <section id="teaching" aria-hidden="true"></section>
+    <section id="news" aria-hidden="true"></section>
+    <section id="contact" aria-hidden="true"></section>
   </main>
 
-
-  <!-- Footer -->
   <footer>
-    <p>
-      &copy; 2026 Fateh Saeidi
-    </p>
+    <div class="container">&copy; 2026 Fateh Saeidi</div>
   </footer>
-
 </body>
 </html>
