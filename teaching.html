@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Teaching by Fateh Saeidi at Cornell University and The University of Texas at Austin."
+  >
+
+  <title>Teaching | Fateh Saeidi</title>
+
+  <style>
+    :root {
+      --background: #f7f5f1;
+      --surface: #ffffff;
+      --text: #242321;
+      --muted: #66615b;
+      --accent: #9b3f1d;
+      --accent-dark: #7d2f16;
+      --border: #ddd6cc;
+      --max-width: 1160px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18px;
+      line-height: 1.72;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+      color: var(--accent);
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(calc(100% - 42px), var(--max-width));
+      margin: 0 auto;
+    }
+
+    /* Header */
+
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      background: rgba(247, 245, 241, 0.97);
+    }
+
+    .nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .site-name {
+      font-size: 1.25rem;
+      letter-spacing: 0.01em;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.89rem;
+    }
+
+    .nav-links .active {
+      color: var(--accent);
+    }
+
+    /* Page introduction */
+
+    .page-intro {
+      padding: 76px 0 68px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .page-intro h1 {
+      margin: 0;
+      font-size: clamp(2.7rem, 5vw, 4.45rem);
+      font-weight: normal;
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+    }
+
+    .title-rule {
+      width: 58px;
+      height: 4px;
+      margin: 25px 0 25px;
+      background: var(--accent);
+    }
+
+    .page-intro p {
+      max-width: 820px;
+      margin: 0;
+      color: #45413d;
+      font-size: 1.15rem;
+      line-height: 1.75;
+    }
+
+    /* University sections */
+
+    main {
+      padding: 74px 0 100px;
+    }
+
+    .university-section + .university-section {
+      margin-top: 92px;
+      padding-top: 82px;
+      border-top: 1px solid var(--border);
+    }
+
+    .university-heading {
+      margin-bottom: 38px;
+    }
+
+    .university-heading h2 {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.95rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .university-heading h3 {
+      margin: 0 0 8px;
+      font-size: clamp(1.8rem, 3vw, 2.55rem);
+      font-weight: normal;
+      line-height: 1.25;
+    }
+
+    .university-heading p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* Cornell course */
+
+    .cornell-card {
+      min-height: 440px;
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      overflow: hidden;
+    }
+
+    .cornell-visual {
+      min-height: 440px;
+      display: grid;
+      place-items: center;
+      padding: 44px;
+      background:
+        linear-gradient(rgba(60, 30, 22, 0.06), rgba(60, 30, 22, 0.06)),
+        repeating-linear-gradient(
+          0deg,
+          rgba(155, 63, 29, 0.04) 0,
+          rgba(155, 63, 29, 0.04) 1px,
+          transparent 1px,
+          transparent 7px
+        ),
+        #efe7dc;
+      border-right: 1px solid var(--border);
+    }
+
+    .cornell-monogram {
+      width: min(230px, 72%);
+      aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      font-size: clamp(2rem, 5vw, 4rem);
+      letter-spacing: 0.08em;
+    }
+
+    .cornell-copy {
+      padding: 58px 58px 54px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .term {
+      margin: 0 0 13px;
+      color: var(--accent);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .cornell-copy h4 {
+      margin: 0 0 22px;
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      font-weight: normal;
+      line-height: 1.18;
+    }
+
+    .department {
+      margin: 0 0 23px;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.96rem;
+    }
+
+    .forthcoming {
+      margin: 0;
+      color: #494540;
+      font-style: italic;
+    }
+
+    /* Poster gallery */
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 54px 42px;
+    }
+
+    .course-card {
+      min-width: 0;
+    }
+
+    .poster-button {
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      cursor: zoom-in;
+      overflow: hidden;
+      box-shadow: 0 9px 25px rgba(62, 45, 35, 0.07);
+    }
+
+    .poster-button img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 2 / 3;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.25s ease;
+    }
+
+    .poster-button:hover img,
+    .poster-button:focus img {
+      transform: scale(1.018);
+    }
+
+    .course-caption {
+      padding-top: 19px;
+    }
+
+    .course-caption h4 {
+      margin: 0 0 7px;
+      font-size: 1.34rem;
+      font-weight: normal;
+      line-height: 1.38;
+    }
+
+    .course-caption p {
+      margin: 0;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.9rem;
+      line-height: 1.65;
+    }
+
+    /* Lightbox */
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 28px;
+      background: rgba(20, 18, 16, 0.92);
+    }
+
+    .lightbox.open {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: min(94vw, 1100px);
+      max-height: 91vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      box-shadow: 0 15px 55px rgba(0, 0, 0, 0.45);
+    }
+
+    .lightbox-close {
+      position: fixed;
+      top: 18px;
+      right: 23px;
+      width: 46px;
+      height: 46px;
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      border-radius: 50%;
+      background: transparent;
+      color: white;
+      font-size: 1.75rem;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 30px 0 36px;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 860px) {
+      .nav {
+        padding: 18px 0;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .nav-links {
+        gap: 12px 18px;
+      }
+
+      .page-intro {
+        padding: 56px 0 56px;
+      }
+
+      .cornell-card {
+        grid-template-columns: 1fr;
+      }
+
+      .cornell-visual {
+        min-height: 320px;
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .cornell-copy {
+        padding: 42px 34px 44px;
+      }
+
+      .course-grid {
+        grid-template-columns: 1fr;
+        gap: 52px;
+      }
+
+      .poster-button img {
+        aspect-ratio: auto;
+        max-height: none;
+        object-fit: contain;
+      }
+    }
+
+    @media (max-width: 560px) {
+      body {
+        font-size: 16px;
+      }
+
+      .container {
+        width: min(calc(100% - 28px), var(--max-width));
+      }
+
+      .nav-links {
+        font-size: 0.81rem;
+      }
+
+      main {
+        padding-top: 58px;
+      }
+
+      .university-section + .university-section {
+        margin-top: 68px;
+        padding-top: 62px;
+      }
+
+      .cornell-copy {
+        padding: 34px 24px 38px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="site-name" href="index.html">Fateh Saeidi</a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html#about">About</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="projects.html">Current Projects</a>
+        <a class="active" href="teaching.html">Teaching</a>
+        <a href="news.html">News</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-intro">
+    <div class="container">
+      <h1>Teaching</h1>
+      <div class="title-rule"></div>
+
+      <p>
+        My teaching examines religion as a historical, social, and political
+        phenomenon. Across undergraduate and graduate courses, I encourage
+        students to engage critically with primary sources, historiography,
+        and interdisciplinary approaches to the study of religion and the
+        modern Middle East.
+      </p>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <section class="university-section">
+      <div class="university-heading">
+        <h2>Cornell University</h2>
+        <h3>Department of Government</h3>
+        <p>Spring 2027</p>
+      </div>
+
+      <article class="cornell-card">
+        <div class="cornell-visual" aria-hidden="true">
+          <div class="cornell-monogram">2027</div>
+        </div>
+
+        <div class="cornell-copy">
+          <p class="term">Spring 2027</p>
+
+          <h4>
+            Islam and Politics in the Modern Middle East
+          </h4>
+
+          <p class="department">
+            Department of Government<br>
+            Cornell University
+          </p>
+
+          <p class="forthcoming">
+            Course details and poster forthcoming.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <section class="university-section">
+      <div class="university-heading">
+        <h2>The University of Texas at Austin</h2>
+        <h3>Department of Religious Studies</h3>
+        <p>Courses taught from Spring 2025 through Spring 2026</p>
+      </div>
+
+      <div class="course-grid">
+
+        <article class="course-card">
+          <button
+            class="poster-button"
+            type="button"
+            data-full="teaching-spring-2026.png"
+            aria-label="Open Spring 2026 course poster"
+          >
+            <img
+              src="teaching-spring-2026.png"
+              alt="Spring 2026 Conference Course in Religious Studies poster"
+            >
+          </button>
+
+          <div class="course-caption">
+            <h4>R S 381: Conference Course in Religious Studies</h4>
+            <p>PhD Level · Spring 2026</p>
+          </div>
+        </article>
+
+        <article class="course-card">
+          <button
+            class="poster-button"
+            type="button"
+            data-full="teaching-fall-2025.jpg"
+            aria-label="Open Fall 2025 course poster"
+          >
+            <img
+              src="teaching-fall-2025.jpg"
+              alt="Fall 2025 Introduction to the Study of Religion poster"
+            >
+          </button>
+
+          <div class="course-caption">
+            <h4>R S 310: Introduction to the Study of Religion</h4>
+            <p>Fall 2025</p>
+          </div>
+        </article>
+
+        <article class="course-card">
+          <button
+            class="poster-button"
+            type="button"
+            data-full="teaching-spring-2025.png"
+            aria-label="Open Spring 2025 course poster"
+          >
+            <img
+              src="teaching-spring-2025.png"
+              alt="Spring 2025 Conference Course in Religious Studies poster"
+            >
+          </button>
+
+          <div class="course-caption">
+            <h4>R S 381: Conference Course in Religious Studies</h4>
+            <p>PhD Level · Spring 2025</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      &copy; 2026 Fateh Saeidi
+    </div>
+  </footer>
+
+  <div
+    class="lightbox"
+    id="lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Course poster preview"
+  >
+    <button
+      class="lightbox-close"
+      id="lightbox-close"
+      type="button"
+      aria-label="Close poster preview"
+    >
+      &times;
+    </button>
+
+    <img id="lightbox-image" src="" alt="">
+  </div>
+
+  <script>
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightbox-image");
+    const closeButton = document.getElementById("lightbox-close");
+    const posterButtons = document.querySelectorAll(".poster-button");
+
+    function closeLightbox() {
+      lightbox.classList.remove("open");
+      lightboxImage.src = "";
+      document.body.style.overflow = "";
+    }
+
+    posterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const previewImage = button.querySelector("img");
+        lightboxImage.src = button.dataset.full;
+        lightboxImage.alt = previewImage.alt;
+        lightbox.classList.add("open");
+        document.body.style.overflow = "hidden";
+        closeButton.focus();
+      });
+    });
+
+    closeButton.addEventListener("click", closeLightbox);
+
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && lightbox.classList.contains("open")) {
+        closeLightbox();
+      }
+    });
+  </script>
+
+</body>
+</html>
