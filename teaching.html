@@ -171,31 +171,20 @@
 
     .cornell-visual {
       min-height: 440px;
-      display: grid;
-      place-items: center;
-      padding: 44px;
+      position: relative;
       background:
-        linear-gradient(rgba(60, 30, 22, 0.06), rgba(60, 30, 22, 0.06)),
-        repeating-linear-gradient(
-          0deg,
-          rgba(155, 63, 29, 0.04) 0,
-          rgba(155, 63, 29, 0.04) 1px,
-          transparent 1px,
-          transparent 7px
-        ),
-        #efe7dc;
+        linear-gradient(rgba(35, 20, 16, 0.12), rgba(35, 20, 16, 0.18)),
+        url("cornell-islam-politics.jpg") center center / cover no-repeat;
       border-right: 1px solid var(--border);
     }
 
-    .cornell-monogram {
-      width: min(230px, 72%);
-      aspect-ratio: 1;
-      display: grid;
-      place-items: center;
-      border: 1px solid var(--accent);
-      color: var(--accent);
-      font-size: clamp(2rem, 5vw, 4rem);
-      letter-spacing: 0.08em;
+    .cornell-visual::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 38%;
+      background: linear-gradient(to top, rgba(30, 18, 14, 0.5), transparent);
+      pointer-events: none;
     }
 
     .cornell-copy {
@@ -264,12 +253,6 @@
       aspect-ratio: 2 / 3;
       object-fit: cover;
       object-position: center top;
-      transition: transform 0.25s ease;
-    }
-
-    .poster-button:hover img,
-    .poster-button:focus img {
-      transform: scale(1.018);
     }
 
     .course-caption {
@@ -454,9 +437,11 @@
       </div>
 
       <article class="cornell-card">
-        <div class="cornell-visual" aria-hidden="true">
-          <div class="cornell-monogram">2027</div>
-        </div>
+        <div
+          class="cornell-visual"
+          role="img"
+          aria-label="Contemporary political demonstration in Tunisia"
+        ></div>
 
         <div class="cornell-copy">
           <p class="term">Spring 2027</p>
@@ -471,7 +456,8 @@
           </p>
 
           <p class="forthcoming">
-            Course details and poster forthcoming.
+            A course on Islam, political authority, social movements, and
+            contemporary transformations across the modern Middle East.
           </p>
         </div>
       </article>
