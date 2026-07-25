@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Research in progress by Fateh Saeidi on Sufism and Islamic intellectual history, political Islam and capitalism, and the Guranī literary and religious tradition."
+  >
+
+  <title>Research in Progress | Fateh Saeidi</title>
+
+  <style>
+    :root {
+      --background: #f7f5f1;
+      --surface: #ffffff;
+      --text: #242321;
+      --muted: #66615b;
+      --accent: #9b3f1d;
+      --accent-dark: #7d2f16;
+      --border: #ddd6cc;
+      --max-width: 1160px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18px;
+      line-height: 1.72;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+      color: var(--accent);
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(calc(100% - 42px), var(--max-width));
+      margin: 0 auto;
+    }
+
+    /* Header */
+
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      background: rgba(247, 245, 241, 0.97);
+    }
+
+    .nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .site-name {
+      font-size: 1.25rem;
+      letter-spacing: 0.01em;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.89rem;
+    }
+
+    .nav-links a {
+      position: relative;
+      padding: 4px 0;
+    }
+
+    .nav-links a.active {
+      color: var(--accent);
+    }
+
+    .nav-links a.active::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -5px;
+      left: 0;
+      height: 2px;
+      background: var(--accent);
+    }
+
+    /* Page introduction */
+
+    .page-intro {
+      padding: 72px 0 66px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .page-intro h1 {
+      margin: 0;
+      font-size: clamp(2.7rem, 5vw, 4.35rem);
+      font-weight: normal;
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+    }
+
+    .title-rule {
+      width: 58px;
+      height: 4px;
+      margin: 25px 0 23px;
+      background: var(--accent);
+    }
+
+    .page-intro p {
+      max-width: 900px;
+      margin: 0;
+      color: #45413d;
+      font-size: 1.12rem;
+      line-height: 1.78;
+    }
+
+    /* Projects */
+
+    main {
+      padding: 82px 0 104px;
+    }
+
+    .project {
+      display: grid;
+      grid-template-columns: 185px minmax(0, 1fr);
+      gap: 72px;
+      align-items: start;
+    }
+
+    .project + .project {
+      margin-top: 82px;
+      padding-top: 78px;
+      border-top: 1px solid var(--border);
+    }
+
+    .project-number {
+      position: sticky;
+      top: 30px;
+    }
+
+    .project-number span {
+      display: block;
+      color: var(--accent);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+    }
+
+    .number-rule {
+      width: 42px;
+      height: 3px;
+      margin-top: 16px;
+      background: var(--accent);
+    }
+
+    .project-content {
+      max-width: 850px;
+    }
+
+    .project-content h2 {
+      margin: 0 0 25px;
+      font-size: clamp(1.85rem, 3.6vw, 2.75rem);
+      font-weight: normal;
+      line-height: 1.25;
+      letter-spacing: -0.015em;
+    }
+
+    .project-content p {
+      margin: 0;
+      color: #47433f;
+      font-size: 1.04rem;
+      line-height: 1.85;
+    }
+
+    .project-status {
+      margin-top: 25px !important;
+      color: var(--accent-dark) !important;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.9rem !important;
+      font-weight: 700;
+      line-height: 1.65 !important;
+      letter-spacing: 0.015em;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 30px 0 36px;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 860px) {
+      .nav {
+        padding: 18px 0;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .nav-links {
+        gap: 12px 18px;
+      }
+
+      .page-intro {
+        padding: 56px 0;
+      }
+
+      main {
+        padding: 66px 0 84px;
+      }
+
+      .project {
+        grid-template-columns: 1fr;
+        gap: 27px;
+      }
+
+      .project-number {
+        position: static;
+      }
+
+      .project + .project {
+        margin-top: 66px;
+        padding-top: 62px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      body {
+        font-size: 16px;
+      }
+
+      .container {
+        width: min(calc(100% - 28px), var(--max-width));
+      }
+
+      .nav-links {
+        font-size: 0.81rem;
+      }
+
+      .page-intro {
+        padding: 50px 0;
+      }
+
+      .page-intro h1 {
+        font-size: 2.55rem;
+      }
+
+      .page-intro p {
+        font-size: 1rem;
+      }
+
+      main {
+        padding: 56px 0 70px;
+      }
+
+      .project-content h2 {
+        font-size: 1.75rem;
+      }
+
+      .project-content p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="site-name" href="index.html">Fateh Saeidi</a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html#about">About</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="teaching.html">Teaching</a>
+        <a
+          class="active"
+          href="projects.html"
+          aria-current="page"
+        >
+          Research in Progress
+        </a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-intro" id="top">
+    <div class="container">
+      <h1>Research in Progress</h1>
+
+      <div class="title-rule"></div>
+
+      <p>
+        My current research explores the historical development of Islamic
+        intellectual traditions, the relationship between religion and
+        political transformation in the modern Middle East, and the literary
+        and religious heritage of Kurdish societies. These projects combine
+        intellectual history, manuscript studies, political theory, and the
+        close reading of Arabic, Persian, and Kurdish primary sources.
+      </p>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <section class="project" aria-labelledby="project-one-title">
+      <div class="project-number" aria-hidden="true">
+        <span>01</span>
+        <div class="number-rule"></div>
+      </div>
+
+      <div class="project-content">
+        <h2 id="project-one-title">
+          The Development of Renunciation and Classical Sufism in the Jibāl
+          Region
+        </h2>
+
+        <p>
+          This book examines the emergence and development of renunciation
+          (<em>zuhd</em>) and classical Sufism in the Jibāl region of western
+          Iran between the third/ninth and sixth/twelfth centuries. Drawing on
+          a wide range of Arabic and Persian primary sources, including
+          numerous unpublished manuscripts, it reconstructs the intellectual,
+          social, and religious history of Sufi communities across major urban
+          centers such as Rayy, Iṣfahān, Hamadān, Qazvīn, Abhar, and Nahāvand.
+          The study explores the formation of regional Sufi networks, the
+          transmission of religious knowledge, and the relationship between
+          asceticism, Sufism, theology, and urban religious life in medieval
+          Iran.
+        </p>
+
+        <p class="project-status">
+          Forthcoming with Göttingen University Press.
+        </p>
+      </div>
+    </section>
+
+    <section class="project" aria-labelledby="project-two-title">
+      <div class="project-number" aria-hidden="true">
+        <span>02</span>
+        <div class="number-rule"></div>
+      </div>
+
+      <div class="project-content">
+        <h2 id="project-two-title">
+          Political Islam and the Making of Modern Capitalism
+        </h2>
+
+        <p>
+          This long-term research project examines the historical relationship
+          between religion, political Islam, and capitalism in the modern
+          Middle East. Bringing together intellectual history, political
+          theory, and historical sociology, it investigates how Islamic
+          movements have shaped processes of political and economic
+          transformation from the twentieth century to the present. Through
+          comparative case studies, including Iran, Saudi Arabia, and the
+          Muslim Brotherhood, the project explores changing forms of religious
+          authority, state formation, and economic life. Drawing on Weberian
+          Marxism and theories of religion and capitalism, it develops a new
+          historical framework for understanding the transformation of
+          political Islam in the modern Middle East.
+        </p>
+
+        <p class="project-status">
+          Book project in progress.
+        </p>
+      </div>
+    </section>
+
+    <section class="project" aria-labelledby="project-three-title">
+      <div class="project-number" aria-hidden="true">
+        <span>03</span>
+        <div class="number-rule"></div>
+      </div>
+
+      <div class="project-content">
+        <h2 id="project-three-title">
+          <em>Studia Guranīca: On the Literary, Linguistic, Religious, and
+          Cultural Dimensions of Guranī</em>
+        </h2>
+
+        <p>
+          This edited volume brings together specialists in linguistics,
+          literary studies, religious studies, codicology, and cultural
+          history to advance the interdisciplinary study of the Guranī
+          tradition. Particular attention is devoted to the religious and
+          intellectual heritage preserved in Guranī, including Yārsān
+          <em>kalām</em>, manuscript traditions, canonization, ritual
+          practices, and the relationship between orality and literacy. By
+          integrating the study of language, literature, religion, and
+          manuscript culture, the volume seeks to establish Guranī as a major
+          field within Kurdish and Iranian studies while highlighting the
+          richness of its textual and religious traditions.
+        </p>
+
+        <p class="project-status">
+          Co-edited with Behrooz Chamanara and Hamidreza Nikravesh.
+          Forthcoming with Brill.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      &copy; 2026 Fateh Saeidi
+    </div>
+  </footer>
+
+</body>
+</html>
