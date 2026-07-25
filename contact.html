@@ -1,50 +1,508 @@
-<main class="contact-page">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <div class="contact-grid">
+  <meta name="description" content="Contact information and current academic affiliation for Fateh Saeidi.">
 
-    <section class="contact-info">
+  <title>Contact | Fateh Saeidi</title>
 
-      <h1>Get in Touch</h1>
+  <style>
+    :root {
+      --background: #f7f5f1;
+      --surface: #ffffff;
+      --text: #242321;
+      --muted: #66615b;
+      --accent: #9b3f1d;
+      --accent-dark: #7d2f16;
+      --border: #ddd6cc;
+      --max-width: 1160px;
+    }
 
-      <p class="contact-intro">
-        I welcome correspondence regarding research, teaching, and academic collaboration.
-        Please feel free to reach out by email.
-      </p>
+    * {
+      box-sizing: border-box;
+    }
 
-      <div class="contact-item">
-        <h2>Email</h2>
-        <p>
-          <a href="mailto:fateh.saeidi@cornell.edu">
-            fateh.saeidi@gmail.com
-          </a>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18px;
+      line-height: 1.72;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+      color: var(--accent);
+    }
+
+    .container {
+      width: min(calc(100% - 42px), var(--max-width));
+      margin: 0 auto;
+    }
+
+    /* Header */
+
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      background: rgba(247, 245, 241, 0.97);
+    }
+
+    .nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .site-name {
+      font-size: 1.25rem;
+      letter-spacing: 0.01em;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.89rem;
+    }
+
+    /* Hero */
+
+    .hero {
+      padding: 78px 0 74px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.12fr) minmax(330px, 0.88fr);
+      gap: 78px;
+      align-items: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.65rem, 5vw, 4.35rem);
+      font-weight: normal;
+      line-height: 1.05;
+      letter-spacing: -0.025em;
+    }
+
+    .name-rule {
+      width: 58px;
+      height: 4px;
+      margin: 26px 0 24px;
+      background: var(--accent);
+    }
+
+    .tagline {
+      max-width: 720px;
+      margin: 0 0 27px;
+      color: var(--accent);
+      font-size: clamp(1.7rem, 3vw, 2.45rem);
+      line-height: 1.33;
+    }
+
+    .position {
+      margin: 0 0 28px;
+      color: #403d39;
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+
+    .profile-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+      margin: 10px 0 34px;
+    }
+
+    .profile-link {
+      width: 82px;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.76rem;
+      color: #383531;
+    }
+
+    .icon-circle {
+      width: 52px;
+      height: 52px;
+      margin: 0 auto 8px;
+      border: 1.5px solid var(--accent);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: var(--text);
+      background: transparent;
+      transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+
+    .profile-link:hover .icon-circle,
+    .profile-link:focus .icon-circle {
+      background: var(--accent);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .icon-circle svg {
+      width: 23px;
+      height: 23px;
+      fill: currentColor;
+    }
+
+    .icon-text {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.35rem;
+      font-weight: bold;
+      line-height: 1;
+    }
+
+    .icon-text.small {
+      font-size: 1rem;
+    }
+
+    .hero-intro {
+      max-width: 700px;
+      margin: 0;
+      color: #3f3c38;
+      font-size: 1.07rem;
+    }
+
+    .portrait {
+      margin: 0;
+    }
+
+    .portrait img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center 24%;
+      border: 1px solid var(--border);
+      background: #e7e1d8;
+    }
+
+    /* Main sections */
+
+    main {
+      padding: 82px 0 96px;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: 210px minmax(0, 1fr);
+      gap: 80px;
+      align-items: start;
+    }
+
+    h2 {
+      margin: 0;
+      color: var(--accent);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.95rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .section-rule {
+      width: 42px;
+      height: 3px;
+      margin-top: 16px;
+      background: var(--accent);
+    }
+
+    .about-copy {
+      max-width: 790px;
+    }
+
+    .about-copy p {
+      margin: 0 0 1.35em;
+    }
+
+    .about-copy p:first-child {
+      font-size: 1.22rem;
+      line-height: 1.68;
+    }
+
+    .service {
+      color: var(--muted);
+    }
+
+
+    /* Contact page */
+
+    .contact-page {
+      padding: 82px 0 96px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.82fr) minmax(420px, 1.18fr);
+      gap: 74px;
+      align-items: start;
+    }
+
+    .contact-kicker {
+      margin: 0 0 18px;
+      color: var(--accent);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.92rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .contact-title {
+      margin: 0;
+      font-size: clamp(2.7rem, 5vw, 4.2rem);
+      font-weight: normal;
+      line-height: 1.06;
+      letter-spacing: -0.025em;
+    }
+
+    .contact-intro {
+      max-width: 560px;
+      margin: 26px 0 42px;
+      color: #403d39;
+      font-size: 1.08rem;
+      line-height: 1.75;
+    }
+
+    .contact-details {
+      border-top: 1px solid var(--border);
+    }
+
+    .contact-item {
+      padding: 27px 0 29px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contact-item h2 {
+      margin: 0 0 11px;
+      color: var(--accent);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.84rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .contact-item p {
+      margin: 0;
+      color: #34312e;
+      font-size: 1.04rem;
+      line-height: 1.65;
+    }
+
+    .contact-item a {
+      border-bottom: 1px solid rgba(155, 63, 29, 0.35);
+    }
+
+    .contact-image {
+      margin: 0;
+    }
+
+    .contact-image img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      object-position: center center;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #e7e1d8;
+      box-shadow: 0 10px 28px rgba(62, 45, 35, 0.08);
+    }
+
+    .contact-image figcaption {
+      margin-top: 12px;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.79rem;
+      line-height: 1.55;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 30px 0 36px;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 860px) {
+      .nav {
+        padding: 18px 0;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .nav-links {
+        gap: 12px 18px;
+      }
+
+      .hero {
+        padding: 56px 0 62px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .portrait {
+        max-width: 470px;
+      }
+
+      .section-grid {
+        grid-template-columns: 1fr;
+        gap: 26px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 44px;
+      }
+
+      .contact-image {
+        max-width: 760px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      body {
+        font-size: 16px;
+      }
+
+      .container {
+        width: min(calc(100% - 28px), var(--max-width));
+      }
+
+      .nav-links {
+        font-size: 0.81rem;
+      }
+
+      h1 {
+        font-size: 2.55rem;
+      }
+
+      .tagline {
+        font-size: 1.55rem;
+      }
+
+      .profile-links {
+        gap: 17px;
+      }
+
+      .profile-link {
+        width: 72px;
+      }
+
+      .icon-circle {
+        width: 48px;
+        height: 48px;
+      }
+
+      main {
+        padding-top: 58px;
+      }
+
+      .contact-page {
+        padding: 58px 0 72px;
+      }
+
+      .contact-title {
+        font-size: 2.55rem;
+      }
+
+      .contact-intro {
+        font-size: 1rem;
+        margin-bottom: 34px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="site-name" href="index.html#top">Fateh Saeidi</a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html#about">About</a>
+        <a href="index.html#research">Research</a>
+        <a href="index.html#publications">Publications</a>
+        <a href="index.html#projects">Current Projects</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="index.html#news">News</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contact-page" id="top">
+    <div class="container contact-grid">
+
+      <section class="contact-copy" aria-labelledby="contact-title">
+        <p class="contact-kicker">Contact</p>
+
+        <h1 class="contact-title" id="contact-title">Get in Touch</h1>
+
+        <div class="name-rule"></div>
+
+        <p class="contact-intro">
+          I welcome correspondence regarding research, teaching, and academic collaboration.
+          Please feel free to reach out by email.
         </p>
-      </div>
 
-      <div class="contact-item">
-        <h2>Current Affiliation</h2>
-        <p>
-          Southwest Asia and North Africa (SWANA) Program<br>
-          Cornell University<br>
-          Ithaca, New York
-        </p>
-      </div>
+        <div class="contact-details">
+          <div class="contact-item">
+            <h2>Email</h2>
+            <p><a href="mailto:fateh.saeidi@gmail.com">fateh.saeidi@gmail.com</a></p>
+          </div>
 
-    </section>
+          <div class="contact-item">
+            <h2>Current Affiliation</h2>
+            <p>
+              Southwest Asia and North Africa (SWANA) Program<br>
+              Cornell University<br>
+              Ithaca, New York
+            </p>
+          </div>
+        </div>
+      </section>
 
-    <figure class="contact-image">
+      <figure class="contact-image">
+        <img src="hawraman-mosque.jpg" alt="The festival of Pir Shalyar in Hawraman Takht, Kurdistan">
+        <figcaption>
+          The festival of Pir Shalyar, a centuries-old religious tradition in Hawraman Takht, Kurdistan.
+        </figcaption>
+      </figure>
 
-      <img
-        src="hawraman-mosque.jpg"
-        alt="The festival of Pir Shalyar in Hawraman Takht, Kurdistan"
-      >
+    </div>
+  </main>
 
-      <figcaption>
-        The festival of Pir Shalyar, a centuries-old religious tradition
-        in Hawraman Takht, Kurdistan.
-      </figcaption>
+  <footer>
+    <div class="container">
+      &copy; 2026 Fateh Saeidi
+    </div>
+  </footer>
 
-    </figure>
-
-  </div>
-
-</main>
+</body>
+</html>
