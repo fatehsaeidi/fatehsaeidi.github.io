@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Peer-reviewed publications and books in progress by Fateh Saeidi, historian of religion, sovereignty, and the Middle East.">
+  <title>Publications | Fateh Saeidi</title>
+  <style>
+    :root {
+      --background: #f7f5f1;
+      --surface: #ffffff;
+      --text: #242321;
+      --muted: #66615b;
+      --accent: #9b3f1d;
+      --accent-dark: #7d2f16;
+      --border: #ddd6cc;
+      --max-width: 1160px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18px;
+      line-height: 1.72;
+    }
+    a { color: inherit; text-decoration: none; }
+    a:hover, a:focus { color: var(--accent); }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+    .container { width: min(calc(100% - 42px), var(--max-width)); margin: 0 auto; }
+
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      background: rgba(247, 245, 241, 0.97);
+    }
+    .nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+    .site-name { font-size: 1.25rem; letter-spacing: 0.01em; }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.89rem;
+    }
+    .nav-links a { position: relative; padding: 4px 0; }
+    .nav-links a.active { color: var(--accent); }
+    .nav-links a.active::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -5px;
+      left: 0;
+      height: 2px;
+      background: var(--accent);
+    }
+
+    .page-intro {
+      padding: 72px 0 66px;
+      border-bottom: 1px solid var(--border);
+    }
+    .page-intro h1 {
+      margin: 0;
+      font-size: clamp(2.75rem, 5vw, 4.35rem);
+      font-weight: normal;
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+    }
+    .title-rule {
+      width: 58px;
+      height: 4px;
+      margin: 25px 0 23px;
+      background: var(--accent);
+    }
+    .page-intro p {
+      max-width: 840px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.12rem;
+      line-height: 1.75;
+    }
+
+    main { padding: 82px 0 100px; }
+    .publication-section {
+      display: grid;
+      grid-template-columns: 230px minmax(0, 1fr);
+      gap: 76px;
+      align-items: start;
+    }
+    .publication-section + .publication-section {
+      margin-top: 84px;
+      padding-top: 76px;
+      border-top: 1px solid var(--border);
+    }
+    .section-heading { position: sticky; top: 30px; }
+    .section-heading h2 {
+      margin: 0;
+      color: var(--accent);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.92rem;
+      line-height: 1.55;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+    .section-rule {
+      width: 42px;
+      height: 3px;
+      margin-top: 16px;
+      background: var(--accent);
+    }
+    .publication-list { max-width: 820px; }
+    .publication { margin: 0; padding: 0 0 31px; }
+    .publication + .publication {
+      padding-top: 31px;
+      border-top: 1px solid rgba(221, 214, 204, 0.72);
+    }
+    .publication:last-child { padding-bottom: 0; }
+    .publication h3 {
+      margin: 0 0 8px;
+      font-size: 1.14rem;
+      font-weight: 600;
+      line-height: 1.48;
+    }
+    .publication h3 a {
+      text-decoration-line: underline;
+      text-decoration-color: transparent;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+      transition: color 0.18s ease, text-decoration-color 0.18s ease;
+    }
+    .publication h3 a:hover,
+    .publication h3 a:focus {
+      color: var(--accent);
+      text-decoration-color: var(--accent);
+    }
+    .coauthor, .citation, .book-note { margin: 0; }
+    .coauthor {
+      margin-bottom: 3px;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.88rem;
+      line-height: 1.55;
+    }
+    .citation, .book-note {
+      color: var(--muted);
+      font-size: 0.98rem;
+      line-height: 1.65;
+    }
+    .access-badge {
+      display: inline-block;
+      margin-left: 8px;
+      padding: 2px 7px;
+      border: 1px solid rgba(155, 63, 29, 0.48);
+      border-radius: 999px;
+      color: var(--accent-dark);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.66rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 1.4;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      vertical-align: 0.12em;
+      white-space: nowrap;
+    }
+    .book-title { font-style: italic; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 30px 0 36px;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 860px) {
+      .nav {
+        padding: 18px 0;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .nav-links { gap: 12px 18px; }
+      .page-intro { padding: 56px 0; }
+      main { padding: 66px 0 82px; }
+      .publication-section { grid-template-columns: 1fr; gap: 30px; }
+      .section-heading { position: static; }
+      .publication-section + .publication-section {
+        margin-top: 66px;
+        padding-top: 62px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      body { font-size: 16px; }
+      .container { width: min(calc(100% - 28px), var(--max-width)); }
+      .nav-links { font-size: 0.81rem; }
+      .page-intro { padding: 50px 0; }
+      .page-intro h1 { font-size: 2.55rem; }
+      .page-intro p { font-size: 1rem; }
+      main { padding: 56px 0 70px; }
+      .publication h3 { font-size: 1.08rem; }
+      .publication { padding-bottom: 26px; }
+      .publication + .publication { padding-top: 26px; }
+      .access-badge { margin-left: 5px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="site-name" href="index.html">Fateh Saeidi</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html#about">About</a>
+        <a href="research.html">Research</a>
+        <a class="active" href="publications.html" aria-current="page">Publications</a>
+        <a href="projects.html">Current Projects</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="news.html">News</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-intro" id="top">
+    <div class="container">
+      <h1>Publications</h1>
+      <div class="title-rule"></div>
+      <p>
+        My publications explore three interconnected areas of research:
+        Sufism and Islamic intellectual history, religion and politics in the
+        modern Middle East, and coloniality, nationalism, and religion in Kurdistan.
+      </p>
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="publication-section" aria-labelledby="journal-articles">
+      <div class="section-heading">
+        <h2 id="journal-articles">Peer-Reviewed<br>Journal Articles</h2>
+        <div class="section-rule"></div>
+      </div>
+      <div class="publication-list">
+
+        <article class="publication">
+          <h3><a href="https://doi.org/10.1080/09502386.2026.2686600" target="_blank" rel="noopener">Embracing Colonialism: How “Being Iranian” Subsumes Kurdish Identity</a><span class="access-badge">Open Access</span></h3>
+          <p class="citation"><em>Cultural Studies</em>. Online First (2026).</p>
+        </article>
+
+        <article class="publication">
+          <h3><a href="https://doi.org/10.1111/dome.70030" target="_blank" rel="noopener">“American Islam”: The Politics of Religious Authenticity in Iran</a></h3>
+          <p class="citation"><em>Digest of Middle East Studies</em> 35, no. 3 (2026): e70030.</p>
+        </article>
+
+        <article class="publication">
+          <h3><a href="https://doi.org/10.1080/13629395.2026.2669863" target="_blank" rel="noopener">The Language of “Conquest” in Syria’s Renewed War Against Kurdish Self-Rule</a></h3>
+          <p class="coauthor">with Davoud Osmanzadeh</p>
+          <p class="citation"><em>Mediterranean Politics</em>. Online First (2026): 1–11.</p>
+        </article>
+
+        <article class="publication">
+          <h3><a href="https://doi.org/10.1080/21567689.2025.2604580" target="_blank" rel="noopener">Muslim Brotherhood Legacies and Local Adaptations in Iran: The Iranian Call and Reform Organization</a><span class="access-badge">Open Access</span></h3>
+          <p class="coauthor">with Davoud Osmanzadeh</p>
+          <p class="citation"><em>Politics, Religion &amp; Ideology</em> 26, no. 4 (2025): 542–562.</p>
+        </article>
+
+        <article class="publication">
+          <h3><a href="https://doi.org/10.1017/rms.2025.3" target="_blank" rel="noopener">Religion Meets Gender: The Impact of Sunni Islamic Discourse on the Jina Uprising in Eastern Kurdistan</a></h3>
+          <p class="coauthor">with Ahmad Mohammadpour</p>
+          <p class="citation"><em>Review of Middle East Studies</em> 59, no. 2 (2025): 68–76.</p>
+        </article>
+
+        <article class="publication">
+          <h3><a href="https://doi.org/10.1080/14631369.2024.2410839" target="_blank" rel="noopener">Nationalizing Religion: Sufism in the “Persianate World”</a></h3>
+          <p class="coauthor">with Ahmad Mohammadpour</p>
+          <p class="citation"><em>Asian Ethnicity</em> 26, no. 2 (2025): 318–343.</p>
+        </article>
+
+        <article class="publication">
+          <h3><a href="https://doi.org/10.1177/14687968241287204" target="_blank" rel="noopener">Colonial Sovereignty and Religious Necropolitics: The Sacred Victimization of Infidel Kurds in the Middle East</a><span class="access-badge">Open Access</span></h3>
+          <p class="coauthor">with Davoud Osmanzadeh</p>
+          <p class="citation"><em>Ethnicities</em> 25, no. 5 (2025): 655–678.</p>
+        </article>
+
+        <article class="publication">
+          <h3><a href="https://scholar.google.com/scholar?q=%22The+Ascetics+and+Early+Sufis+of+I%E1%B9%A3fah%C4%81n%22" target="_blank" rel="noopener">The Ascetics and Early Sufis of Iṣfahān</a></h3>
+          <p class="citation"><em>Journal of Islamic and Muslim Studies</em> 8, no. 2 (2023): 1–25.</p>
+        </article>
+
+        <article class="publication">
+          <h3><a href="https://doi.org/10.35632/ajis.v40i3-4.3210" target="_blank" rel="noopener">The Early Sufi Tradition in Hamadān, Nahāwand, and Abhar: Stories of Devotion, Mystical Experiences, and Sufi Texts</a><span class="access-badge">Open Access</span></h3>
+          <p class="citation"><em>American Journal of Islam and Society</em> 40, nos. 3–4 (2023): 104–135.</p>
+        </article>
+
+        <article class="publication">
+          <h3><a href="https://doi.org/10.55831/ajis.v8i1.513" target="_blank" rel="noopener">Yaḥyā ibn Muʿādh al-Rāzī and His Disciples: Their Influence on Early Sufism</a><span class="access-badge">Open Access</span></h3>
+          <p class="citation"><em>Australian Journal of Islamic Studies</em> 8, no. 1 (2023): 42–61.</p>
+        </article>
+
+        <article class="publication">
+          <h3><a href="https://doi.org/10.17605/OSF.IO/HRV46" target="_blank" rel="noopener">Gülen-Inspired Schools in Southern Kurdistan: Curriculum and Ideology</a><span class="access-badge">Open Access</span></h3>
+          <p class="citation"><em>Journal of Middle Eastern Research</em> 1, no. 1 (2017): 4–27.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="publication-section" aria-labelledby="book-chapter">
+      <div class="section-heading">
+        <h2 id="book-chapter">Peer-Reviewed<br>Book Chapter</h2>
+        <div class="section-rule"></div>
+      </div>
+      <div class="publication-list">
+        <article class="publication">
+          <h3><a href="https://doi.org/10.1007/978-3-031-87612-7_17" target="_blank" rel="noopener">Religious Rhetoric and Genocidal Violence: The Massacre of Kurds in Rojhelat Under Khomeini’s Fatwa</a></h3>
+          <p class="coauthor">with Davoud Osmanzadeh</p>
+          <p class="citation">In Kaziwa Salih (ed.), <span class="book-title">The Palgrave Handbook of Kurdish Genocides</span>, 399–421. Cham: Palgrave Macmillan, 2025.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="publication-section" aria-labelledby="books-progress">
+      <div class="section-heading">
+        <h2 id="books-progress">Books in Progress</h2>
+        <div class="section-rule"></div>
+      </div>
+      <div class="publication-list">
+        <article class="publication">
+          <h3>The Development of Renunciation and Classical Sufism in the Jibāl Region</h3>
+          <p class="book-note">Single-authored monograph. Göttingen University Press, forthcoming 2027.</p>
+        </article>
+        <article class="publication">
+          <h3><span class="book-title">Studia Guranica: On the Literary, Linguistic, Religious, and Cultural Dimensions of Guran</span></h3>
+          <p class="coauthor">Co-edited with Behrooz Chamanara and Hamidreza Nikravesh</p>
+          <p class="book-note">Leiden: Brill, forthcoming 2027.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">&copy; 2026 Fateh Saeidi</div>
+  </footer>
+</body>
+</html>
