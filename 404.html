@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, follow">
+  <meta name="description" content="The requested page could not be found on Fateh Saeidi’s website.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <title>Page Not Found | Fateh Saeidi</title>
+
+  <style>
+    :root {
+      --background: #f7f5f1;
+      --text: #242321;
+      --muted: #66615b;
+      --accent: #9b3f1d;
+      --border: #ddd6cc;
+      --max-width: 1160px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      background: var(--background);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18px;
+      line-height: 1.72;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+      color: var(--accent);
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(calc(100% - 42px), var(--max-width));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      background: rgba(247, 245, 241, 0.97);
+    }
+
+    .nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .site-name {
+      font-size: 1.25rem;
+      letter-spacing: 0.01em;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.89rem;
+    }
+
+    main {
+      flex: 1;
+      display: grid;
+      place-items: center;
+      padding: 76px 0 92px;
+    }
+
+    .not-found {
+      max-width: 760px;
+    }
+
+    .error-code {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.75rem, 6vw, 4.8rem);
+      font-weight: normal;
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+    }
+
+    .title-rule {
+      width: 58px;
+      height: 4px;
+      margin: 26px 0 24px;
+      background: var(--accent);
+    }
+
+    .not-found p {
+      max-width: 650px;
+      margin: 0 0 30px;
+      color: var(--muted);
+      font-size: 1.12rem;
+    }
+
+    .home-link {
+      display: inline-block;
+      border: 1.5px solid var(--accent);
+      padding: 10px 18px;
+      color: var(--accent);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.88rem;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .home-link:hover,
+    .home-link:focus {
+      background: var(--accent);
+      color: white;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 30px 0 36px;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 860px) {
+      .nav {
+        padding: 18px 0;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .nav-links {
+        gap: 12px 18px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      body {
+        font-size: 16px;
+      }
+
+      .container {
+        width: min(calc(100% - 28px), var(--max-width));
+      }
+
+      .nav-links {
+        font-size: 0.81rem;
+      }
+
+      main {
+        padding-top: 56px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="site-name" href="index.html">Fateh Saeidi</a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html#about">About</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="projects.html">Research in Progress</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container not-found" aria-labelledby="not-found-title">
+      <p class="error-code">Error 404</p>
+      <h1 id="not-found-title">Page Not Found</h1>
+      <div class="title-rule"></div>
+      <p>
+        The page you requested may have moved or no longer exists. You can
+        return to the homepage or use the navigation above to continue.
+      </p>
+      <a class="home-link" href="index.html">Return to homepage</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">&copy; 2026 Fateh Saeidi</div>
+  </footer>
+</body>
+</html>
