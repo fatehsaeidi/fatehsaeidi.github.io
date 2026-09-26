@@ -21,7 +21,7 @@
       "@id": "https://fatehsaeidi.github.io/#profile-page",
       "url": "https://fatehsaeidi.github.io/",
       "name": "Fateh Saeidi | Historian of Islam and the Middle East",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-25",
       "isPartOf": {
         "@id": "https://fatehsaeidi.github.io/#website"
       },
@@ -34,7 +34,6 @@
       "@id": "https://fatehsaeidi.github.io/#person",
       "name": "Fateh Saeidi",
       "url": "https://fatehsaeidi.github.io/",
-      "image": "https://fatehsaeidi.github.io/profile.jpg",
       "description": "Historian of Islam and the Middle East working across the premodern and modern periods.",
       "email": [
         "mailto:fs527@cornell.edu",
@@ -106,8 +105,8 @@
     content="Fateh Saeidi is a historian of Islam and the Middle East researching Sufism, Islamic intellectual history, political Islam, coloniality, and nationalism."
   >
   <meta property="og:url" content="https://fatehsaeidi.github.io/">
-  <meta property="og:image" content="https://fatehsaeidi.github.io/profile.jpg">
-  <meta property="og:image:alt" content="Portrait of Fateh Saeidi in a library">
+  <meta property="og:image" content="https://fatehsaeidi.github.io/merdin-mizgefta-mezin.jpg">
+  <meta property="og:image:alt" content="Aerial view of historic Mêrdîn, featuring the minaret of Mizgefta Mezin.">
   <meta property="og:locale" content="en_US">
 
   <meta name="twitter:card" content="summary_large_image">
@@ -116,8 +115,8 @@
     name="twitter:description"
     content="Fateh Saeidi is a historian of Islam and the Middle East researching Sufism, Islamic intellectual history, political Islam, coloniality, and nationalism."
   >
-  <meta name="twitter:image" content="https://fatehsaeidi.github.io/profile.jpg">
-  <meta name="twitter:image:alt" content="Portrait of Fateh Saeidi in a library">
+  <meta name="twitter:image" content="https://fatehsaeidi.github.io/merdin-mizgefta-mezin.jpg">
+  <meta name="twitter:image:alt" content="Aerial view of historic Mêrdîn, featuring the minaret of Mizgefta Mezin.">
 
   <title>Fateh Saeidi | Historian of Islam and the Middle East</title>
 
@@ -305,16 +304,16 @@
       font-size: 1.07rem;
     }
 
-    .portrait {
+    .hero-image {
       margin: 0;
+      width: min(100%, 380px);
+      justify-self: center;
     }
 
-    .portrait img {
+    .hero-image img {
       display: block;
       width: 100%;
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
-      object-position: center 24%;
+      height: auto;
       border: 1px solid var(--border);
       background: #e7e1d8;
     }
@@ -375,6 +374,26 @@
       font-size: 0.85rem;
     }
 
+    .footer-content {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 18px 36px;
+    }
+
+    .photo-credit {
+      margin: 0;
+      color: #7e7871;
+      font-size: 0.72rem;
+      text-align: right;
+    }
+
+    .photo-credit a {
+      text-decoration: underline;
+      text-decoration-color: #bbb3aa;
+      text-underline-offset: 2px;
+    }
+
     @media (max-width: 860px) {
       .nav {
         padding: 18px 0;
@@ -394,10 +413,6 @@
       .hero-grid {
         grid-template-columns: 1fr;
         gap: 48px;
-      }
-
-      .portrait {
-        max-width: 470px;
       }
 
       .section-grid {
@@ -446,6 +461,16 @@
 
       .about-copy p {
         font-size: 1.0625rem;
+      }
+
+      .footer-content {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 7px;
+      }
+
+      .photo-credit {
+        text-align: left;
       }
     }
   </style>
@@ -540,10 +565,12 @@
         </p>
       </div>
 
-      <figure class="portrait">
+      <figure class="hero-image">
         <img
-          src="profile.jpg"
-          alt="Portrait of Fateh Saeidi in a library"
+          src="merdin-mizgefta-mezin.jpg"
+          alt="Aerial view of historic Mêrdîn, featuring the minaret of Mizgefta Mezin."
+          width="4608"
+          height="8192"
         >
       </figure>
 
@@ -611,8 +638,14 @@
   </main>
 
   <footer>
-    <div class="container">
-      &copy; 2026 Fateh Saeidi
+    <div class="container footer-content">
+      <span>&copy; 2026 Fateh Saeidi</span>
+      <p class="photo-credit">
+        Homepage photo:
+        <a href="https://www.pexels.com/@shuttercraftsman-240571253/" target="_blank" rel="noopener">Shuttercraftsman</a>
+        via
+        <a href="https://www.pexels.com/photo/aerial-view-of-historic-mardin-cityscape-38016697/" target="_blank" rel="noopener">Pexels</a>.
+      </p>
     </div>
   </footer>
 
