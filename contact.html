@@ -17,14 +17,14 @@
   <meta property="og:description" content="Contact information and current academic affiliation for Fateh Saeidi.">
   <meta property="og:url" content="https://fatehsaeidi.github.io/contact.html">
   <meta property="og:image" content="https://fatehsaeidi.github.io/library-ladder.jpg">
-  <meta property="og:image:alt" content="Sunlit old library with rows of antique books and a rolling ladder.">
+  <meta property="og:image:alt" content="A sunlit vintage library in San Francisco featuring antique shelves, books, and a wooden ladder.">
   <meta property="og:locale" content="en_US">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Contact | Fateh Saeidi">
   <meta name="twitter:description" content="Contact information and current academic affiliation for Fateh Saeidi.">
   <meta name="twitter:image" content="https://fatehsaeidi.github.io/library-ladder.jpg">
-  <meta name="twitter:image:alt" content="Sunlit old library with rows of antique books and a rolling ladder.">
+  <meta name="twitter:image:alt" content="A sunlit vintage library in San Francisco featuring antique shelves, books, and a wooden ladder.">
 
   <title>Contact | Fateh Saeidi</title>
 
@@ -272,8 +272,8 @@
 
     .contact-grid {
       display: grid;
-      grid-template-columns: minmax(0, 0.82fr) minmax(420px, 1.18fr);
-      gap: 74px;
+      grid-template-columns: minmax(0, 1.12fr) minmax(330px, 0.88fr);
+      gap: 78px;
       align-items: start;
     }
 
@@ -353,15 +353,14 @@
 
     .contact-image {
       margin: 0;
+      width: min(100%, 380px);
+      justify-self: center;
     }
 
     .contact-image img {
       display: block;
       width: 100%;
       height: auto;
-      aspect-ratio: 16 / 10;
-      object-fit: cover;
-      object-position: center 35%;
       border: 1px solid var(--border);
       border-radius: 10px;
       background: #e7e1d8;
@@ -369,21 +368,30 @@
     }
 
     .contact-image figcaption {
-      margin-top: 12px;
+      max-width: 34em;
+      margin: 11px auto 0;
       color: var(--muted);
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.79rem;
-      line-height: 1.55;
+      font-size: 0.72rem;
+      line-height: 1.45;
+      text-align: center;
     }
 
-    .contact-photo-credit {
-      display: block;
-      margin-top: 3px;
+    .footer-content {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 18px 36px;
+    }
+
+    .photo-credit {
+      margin: 0;
       color: #7e7871;
       font-size: 0.72rem;
+      text-align: right;
     }
 
-    .contact-photo-credit a {
+    .photo-credit a {
       text-decoration: underline;
       text-decoration-color: #bbb3aa;
       text-underline-offset: 2px;
@@ -433,7 +441,8 @@
       }
 
       .contact-image {
-        max-width: 760px;
+        width: min(100%, 380px);
+        justify-self: center;
       }
     }
 
@@ -452,6 +461,16 @@
 
       h1 {
         font-size: 2.55rem;
+      }
+
+      .footer-content {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 7px;
+      }
+
+      .photo-credit {
+        text-align: left;
       }
 
       .tagline {
@@ -558,26 +577,26 @@
       <figure class="contact-image">
         <img
           src="library-ladder.jpg"
-          alt="Sunlit old library with rows of antique books and a rolling ladder."
+          alt="A sunlit vintage library in San Francisco featuring antique shelves, books, and a wooden ladder."
           width="5760"
           height="8640"
         >
         <figcaption>
-          Sunlit old library with antique books and a rolling ladder.
-          <span class="contact-photo-credit">
-            Photo:
-            <a href="https://www.pexels.com/@frank-minjarez-333886454/" target="_blank" rel="noopener">frank minjarez</a>
-            via
-            <a href="https://www.pexels.com/photo/view-of-a-ladder-standing-next-to-a-bookshelf-in-an-old-library-15241412/" target="_blank" rel="noopener">Pexels</a>.
-          </span>
+          A sunlit vintage library in San Francisco featuring antique shelves, books, and a wooden ladder.
         </figcaption>
       </figure>
     </div>
   </main>
 
   <footer>
-    <div class="container">
-      &copy; 2026 Fateh Saeidi
+    <div class="container footer-content">
+      <span>&copy; 2026 Fateh Saeidi</span>
+      <p class="photo-credit">
+        Contact photo:
+        <a href="https://www.pexels.com/@frank-minjarez-333886454/" target="_blank" rel="noopener">frank minjarez</a>
+        via
+        <a href="https://www.pexels.com/photo/view-of-a-ladder-standing-next-to-a-bookshelf-in-an-old-library-15241412/" target="_blank" rel="noopener">Pexels</a>.
+      </p>
     </div>
   </footer>
 
