@@ -16,15 +16,15 @@
   <meta property="og:title" content="Contact | Fateh Saeidi">
   <meta property="og:description" content="Contact information and current academic affiliation for Fateh Saeidi.">
   <meta property="og:url" content="https://fatehsaeidi.github.io/contact.html">
-  <meta property="og:image" content="https://fatehsaeidi.github.io/akre-great-mosque.jpg">
-  <meta property="og:image:alt" content="The Great Mosque of Akrê, Kurdistan">
+  <meta property="og:image" content="https://fatehsaeidi.github.io/library-ladder.jpg">
+  <meta property="og:image:alt" content="Sunlit old library with rows of antique books and a rolling ladder.">
   <meta property="og:locale" content="en_US">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Contact | Fateh Saeidi">
   <meta name="twitter:description" content="Contact information and current academic affiliation for Fateh Saeidi.">
-  <meta name="twitter:image" content="https://fatehsaeidi.github.io/akre-great-mosque.jpg">
-  <meta name="twitter:image:alt" content="The Great Mosque of Akrê, Kurdistan">
+  <meta name="twitter:image" content="https://fatehsaeidi.github.io/library-ladder.jpg">
+  <meta name="twitter:image:alt" content="Sunlit old library with rows of antique books and a rolling ladder.">
 
   <title>Contact | Fateh Saeidi</title>
 
@@ -358,9 +358,10 @@
     .contact-image img {
       display: block;
       width: 100%;
+      height: auto;
       aspect-ratio: 16 / 10;
       object-fit: cover;
-      object-position: center center;
+      object-position: center 35%;
       border: 1px solid var(--border);
       border-radius: 10px;
       background: #e7e1d8;
@@ -373,6 +374,19 @@
       font-family: Arial, Helvetica, sans-serif;
       font-size: 0.79rem;
       line-height: 1.55;
+    }
+
+    .contact-photo-credit {
+      display: block;
+      margin-top: 3px;
+      color: #7e7871;
+      font-size: 0.72rem;
+    }
+
+    .contact-photo-credit a {
+      text-decoration: underline;
+      text-decoration-color: #bbb3aa;
+      text-underline-offset: 2px;
     }
 
     footer {
@@ -542,12 +556,22 @@
       </section>
 
       <figure class="contact-image">
-  <img src="akre-great-mosque.jpg"
-       alt="The Great Mosque of Akrê, Kurdistan">
-  <figcaption>
-    The Great Mosque of Akrê, a historic Sunni mosque in Kurdistan.
-  </figcaption>
-</figure>
+        <img
+          src="library-ladder.jpg"
+          alt="Sunlit old library with rows of antique books and a rolling ladder."
+          width="5760"
+          height="8640"
+        >
+        <figcaption>
+          Sunlit old library with antique books and a rolling ladder.
+          <span class="contact-photo-credit">
+            Photo:
+            <a href="https://www.pexels.com/@frank-minjarez-333886454/" target="_blank" rel="noopener">frank minjarez</a>
+            via
+            <a href="https://www.pexels.com/photo/view-of-a-ladder-standing-next-to-a-bookshelf-in-an-old-library-15241412/" target="_blank" rel="noopener">Pexels</a>.
+          </span>
+        </figcaption>
+      </figure>
     </div>
   </main>
 
