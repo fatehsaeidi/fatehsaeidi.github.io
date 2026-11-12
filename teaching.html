@@ -6,7 +6,7 @@
 
   <meta
     name="description"
-    content="Courses taught by Fateh Saeidi in Islamic Studies, Religious Studies, and religion and politics at Cornell University and The University of Texas at Austin."
+    content="Courses taught by Fateh Saeidi in Islamic Studies, Religious Studies, and religion and politics at The University of Texas at Austin."
   >
   <meta name="author" content="Fateh Saeidi">
   <meta name="robots" content="index, follow">
@@ -17,17 +17,17 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Fateh Saeidi">
   <meta property="og:title" content="Teaching Islamic and Religious Studies | Fateh Saeidi">
-  <meta property="og:description" content="Courses taught by Fateh Saeidi in Islamic Studies, Religious Studies, and religion and politics at Cornell University and The University of Texas at Austin.">
+  <meta property="og:description" content="Courses taught by Fateh Saeidi in Islamic Studies, Religious Studies, and religion and politics at The University of Texas at Austin.">
   <meta property="og:url" content="https://fatehsaeidi.github.io/teaching.html">
-  <meta property="og:image" content="https://fatehsaeidi.github.io/cornell-islam-politics.jpg">
-  <meta property="og:image:alt" content="Islam and Politics in the Modern Middle East course poster">
+  <meta property="og:image" content="https://fatehsaeidi.github.io/teaching-spring-2026.png">
+  <meta property="og:image:alt" content="Spring 2026 Conference Course in Religious Studies poster">
   <meta property="og:locale" content="en_US">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Teaching Islamic and Religious Studies | Fateh Saeidi">
-  <meta name="twitter:description" content="Courses taught by Fateh Saeidi in Islamic Studies, Religious Studies, and religion and politics at Cornell University and The University of Texas at Austin.">
-  <meta name="twitter:image" content="https://fatehsaeidi.github.io/cornell-islam-politics.jpg">
-  <meta name="twitter:image:alt" content="Islam and Politics in the Modern Middle East course poster">
+  <meta name="twitter:description" content="Courses taught by Fateh Saeidi in Islamic Studies, Religious Studies, and religion and politics at The University of Texas at Austin.">
+  <meta name="twitter:image" content="https://fatehsaeidi.github.io/teaching-spring-2026.png">
+  <meta name="twitter:image:alt" content="Spring 2026 Conference Course in Religious Studies poster">
 
   <title>Teaching Islamic and Religious Studies | Fateh Saeidi</title>
 
@@ -176,65 +176,6 @@
     .university-heading p {
       margin: 0;
       color: var(--muted);
-    }
-
-    /* Cornell course */
-
-    .cornell-course {
-      width: 100%;
-    }
-
-    .cornell-poster-button {
-      display: block;
-      width: 100%;
-      padding: 0;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      background: var(--surface);
-      cursor: zoom-in;
-      overflow: hidden;
-      box-shadow: 0 9px 25px rgba(62, 45, 35, 0.07);
-    }
-
-    .cornell-poster-button img {
-      display: block;
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-    }
-
-    .cornell-caption {
-      padding: 20px 2px 0;
-    }
-
-    .cornell-caption h4 {
-      margin: 0 0 8px;
-      font-size: clamp(1.55rem, 2.7vw, 2.1rem);
-      font-weight: normal;
-      line-height: 1.35;
-    }
-
-    .course-level {
-      margin: 0;
-      display: flex;
-      align-items: center;
-      gap: 9px;
-      color: var(--muted);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.88rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .course-level-icon {
-      width: 22px;
-      height: 22px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--muted);
-      flex: 0 0 auto;
     }
 
     /* Poster gallery */
@@ -426,52 +367,6 @@
 
     <section class="university-section">
       <div class="university-heading">
-        <h2>Cornell University</h2>
-        <h3>Department of Government</h3>
-        <p>Spring 2027</p>
-      </div>
-
-      <article class="cornell-course">
-        <button
-          class="cornell-poster-button"
-          type="button"
-          data-full="cornell-islam-politics.jpg"
-          aria-label="Open Cornell course poster"
-        >
-          <img
-            src="cornell-islam-politics.jpg"
-            alt="Islam and Politics in the Modern Middle East, Cornell University, Spring 2027"
-          >
-        </button>
-
-        <div class="cornell-caption">
-          <h4>Islam and Politics in the Modern Middle East</h4>
-
-          <p class="course-level">
-            <span class="course-level-icon" aria-hidden="true">
-              <svg
-                viewBox="0 0 24 24"
-                width="22"
-                height="22"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M3 9.5 12 5l9 4.5-9 4.5-9-4.5Z"></path>
-                <path d="M7 12v4.2c2.8 2.1 7.2 2.1 10 0V12"></path>
-                <path d="M21 10v5"></path>
-              </svg>
-            </span>
-            Undergraduate Course
-          </p>
-        </div>
-      </article>
-    </section>
-
-    <section class="university-section">
-      <div class="university-heading">
         <h2>The University of Texas at Austin</h2>
         <h3>Department of Religious Studies</h3>
         <p>Courses taught from Spring 2025 through Spring 2026</p>
@@ -570,7 +465,7 @@
     const lightbox = document.getElementById("lightbox");
     const lightboxImage = document.getElementById("lightbox-image");
     const closeButton = document.getElementById("lightbox-close");
-    const posterButtons = document.querySelectorAll(".poster-button, .cornell-poster-button");
+    const posterButtons = document.querySelectorAll(".poster-button");
 
     function closeLightbox() {
       lightbox.classList.remove("open");
